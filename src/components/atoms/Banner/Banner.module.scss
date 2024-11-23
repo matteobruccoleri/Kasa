@@ -1,0 +1,19 @@
+.banner {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../../../assets/images/paysage_littoral.webp');
+    background-repeat: no-repeat;
+    border-radius: 25px;
+    height: 225px;
+    background-size: cover;
+    background-position: center;
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+        color: #fff;
+        font-weight: 700;
+        font-size: 48px;
+    }
+}

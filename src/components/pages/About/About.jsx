@@ -4,9 +4,9 @@ import './About.module.scss';
 
 function About() {
     return (
-        <>
+        <main>
             <Banner/>
-        </>
+        </main>
     )
 }
 

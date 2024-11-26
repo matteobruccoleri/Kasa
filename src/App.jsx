@@ -9,6 +9,7 @@ import Header from './components/organisms/Header/Header';
 import Home from './components/pages/Home/Home';
 import About from './components/pages/About/About';
 import NotFound from './components/pages/NotFound/NotFound';
+import Logement from './components/pages/Logement/Logement';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <Header/>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/Logement/:id" element={<Logement />}/>
         <Route path="/About" element={<About />} />
         <Route path="*" element={<NotFound />} />
       </Routes>

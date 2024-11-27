@@ -1,0 +1,22 @@
+.fiche_wrapper {
+    display: flex;
+    justify-content: space-between;
+} 
+
+.title_wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    h1 {
+        color: #FF6060;
+        font-size: 36px;
+        font-weight: 500;
+    }
+    p {
+        font-size: 18px;
+        font-weight: 500;
+    }
+}
+.name_wrapper {
+    display: flex;
+}

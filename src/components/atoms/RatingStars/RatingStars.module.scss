@@ -1,0 +1,9 @@
+.ratingWrapper {
+    display: flex;
+    gap: 5px; // Espacement entre les étoiles
+}
+
+.star {
+    width: 36px;  // Taille des étoiles (ajustez selon vos besoins)
+    height: 36px;
+}

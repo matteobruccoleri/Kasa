@@ -3,7 +3,7 @@ import Logements from "../../../data/logements.js";
 import styles from "./Logement.module.scss";
 import Tags from "../../molecules/Tags/Tags.jsx";
 import RatingStars from "../../atoms/RatingStars/RatingStars.jsx"; // Import du composant
-
+import Arrow from "../../../assets/images/arrow.png"
 function Logement() {
     const { id } = useParams(); // Récupère l'ID comme une chaîne de caractères
     const logement = Logements.find((logement) => logement.id === id);
@@ -13,7 +13,7 @@ function Logement() {
     if (!logement) {
         return <Navigate to="/not-found" />;
     }
-
+    
     return (
         <main className={styles.logement}>
             <div className={styles.carrousel}>
@@ -31,17 +31,27 @@ function Logement() {
                         <img src={logement.host.picture} alt={logement.title} />
                     </div>
                     <div className={styles.rating_wrapper}>
-                            <RatingStars rating={logement.rating} />
+                        <RatingStars rating={logement.rating} />
                     </div>
                 </div>
             </div>
             <div className={styles.dropdown_wrapper}>
-                <div>
-                    <p>{logement.description}</p>
-                </div>
-                <div>
-                    <p>{logement.equipments}</p>
-                </div>
+                <div className={styles.dropdown_wrapper}>
+                    <div className={styles.dropdown_item}>
+                        <h3 className={styles.dropdown_title}>Description<img className={styles.chevron} src={Arrow} alt="flêche"/></h3>
+                        <div className={styles.dropdown_text}>
+                            <p>{logement.description}</p>
+                        </div>
+                    </div>
+                </div>  
+                <div className={styles.dropdown_wrapper}>
+                    <div className={styles.dropdown_item}>
+                        <h3 className={styles.dropdown_title}>Équipements<img className={styles.chevron} src={Arrow} alt="flêche"/></h3>
+                        <div className={styles.dropdown_text}>
+                            <p>{logement.equipments}</p>
+                        </div>
+                    </div>
+                </div> 
             </div>
         </main>
     );

@@ -5,6 +5,9 @@ header {
     width: 90%;
     margin: 20px auto;
 
+    img {
+        height: 68px;
+    }
     nav {
         display: flex;
         align-items: center;
@@ -13,7 +16,7 @@ header {
             text-decoration: none;
             color: #000;
             font-weight: 500;
-            font-weight: 24px;
+            font-size: 24px;
 
             &.active-link {
                 text-decoration: underline;
@@ -25,5 +28,20 @@ header {
 }
 
 header nav a.active-link {
-    text-decoration: underline !important;;
+    text-decoration: underline !important;
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        img {
+            height: 45px;
+        }
+        nav {
+            gap: 25px;
+            a {
+                font-size: 12px;
+            }
+        }
+        
+    }
 }

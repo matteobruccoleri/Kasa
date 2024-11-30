@@ -10,10 +10,32 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 20px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 
     h1 {
         color: #fff;
         font-weight: 700;
         font-size: 48px;
+    }
+}
+@media screen and (max-width: 1024px) {
+    .banner {
+        h1 {
+            font-size: 36px;
+        }
+    }
+}
+@media screen and (max-width: 768px) {
+    .banner {
+        height: 110px;
+        border-radius: 10px;
+        box-shadow: none;
+        justify-content: flex-start;
+
+        h1 {
+            font-size: 24px;
+            width: 225px;
+        }
     }
 }

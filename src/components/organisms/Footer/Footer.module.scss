@@ -12,3 +12,14 @@ footer {
         font-size: 24px;
     }
 }
+
+@media screen and (max-width: 768px) {
+    Footer {
+        padding: 50px 0;
+        gap: 25px;
+        p {
+            font-size: 12px;
+        }
+        
+    }
+}

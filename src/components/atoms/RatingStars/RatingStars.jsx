@@ -27,7 +27,6 @@ const RatingStars = ({ rating, totalStars = 5 }) => {
 // Définition des types de props
 RatingStars.propTypes = {
     rating: PropTypes.number.isRequired, // Note à afficher
-    totalStars: PropTypes.number,        // Nombre total d'étoiles (optionnel, par défaut 5)
 };
 
 export default RatingStars;

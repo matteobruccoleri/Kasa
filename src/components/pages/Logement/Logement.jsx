@@ -2,13 +2,12 @@ import { useParams, Navigate } from "react-router-dom";
 import Logements from "../../../data/logements.js";
 import styles from "./Logement.module.scss";
 import Tags from "../../molecules/Tags/Tags.jsx";
-import RatingStars from "../../atoms/RatingStars/RatingStars.jsx"; // Import du composant
+import RatingStars from "../../atoms/RatingStars/RatingStars.jsx";
 import Arrow from "../../../assets/images/arrow.png"
+
 function Logement() {
     const { id } = useParams(); // Récupère l'ID comme une chaîne de caractères
     const logement = Logements.find((logement) => logement.id === id);
-
-    console.log("Logement trouvé :", logement);
 
     if (!logement) {
         return <Navigate to="/not-found" />;

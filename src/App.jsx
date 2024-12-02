@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
-import './App.module.scss';
+//import './App.module.scss';
 import './assets/styles/global.module.scss';
 
 import Footer from './components/organisms/Footer/Footer';

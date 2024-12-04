@@ -70,40 +70,52 @@
 
 .dropdown_item {
     flex: 1 0 0;
+    background-color: #F6F6F673;
+    border-radius: 5px;
+    overflow: hidden;
+    height: max-content;
 
     .dropdown_title {
         display: flex;
         align-items: center;
         justify-content: space-between;
         background-color: #FF6060;
-        padding: 10px 20px 10px 10px;
-        border-radius: 10px;
+        border-radius: 5px;
+        padding: 10px 15px;
         color: #fff;
         cursor: pointer;
 
         .chevron {
             transition: 0.3s ease-in-out;
-          }
-          .chevron.rotate {
+        }
+        .chevron.rotate {
             transform: rotate(-180deg);
-          }
-      }
-
-
-      .dropdown_text {
-        color: #000;
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.2s ease-out;
-        width: 100%;
-        background-color: #F6F6F673;
+        }
     }
 
+
+    .dropdown_text {
+        color: #000;
+        height: 0;
+        overflow: hidden;
+        transition: 0.3s ease-out;
+        width: 100%;
+
+        li {
+            margin: 20px;
+            display: none;
+        }
+    }
+    .dropdown_text.active {
+        height: 225px;
+
+        li {
+            margin: 20px;
+            display: block;
+        }   
+    }
 }
-.dropdown_text.active {
-    max-height: 500px;
-    overflow: auto;
-  }
+
 
   
 

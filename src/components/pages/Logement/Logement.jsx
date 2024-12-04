@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+//import React, { useState } from 'react';
 
 import { useParams, Navigate } from "react-router-dom";
 import Logements from "../../../data/logements.js";
@@ -12,14 +12,14 @@ import Dropdown from '../../molecules/Dropdown/Dropdown.jsx';
 function Logement() {
     const { id } = useParams(); // Récupère l'ID comme une chaîne de caractères
     const logement = Logements.find((logement) => logement.id === id);
-    const [dropdown, setDropdown] = useState(false);
+   // const [dropdown, setDropdown] = useState(false);
 
 
-    function handleDropdown() {
+    /*function handleDropdown() {
         setDropdown(!dropdown)
         console.log(dropdown)
     }
-
+*/
     if (!logement) {
         return <Navigate to="/not-found" />;
     }

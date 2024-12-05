@@ -1,7 +1,6 @@
-//import React, { useState } from 'react';
-
 import { useParams, Navigate } from "react-router-dom";
 import Logements from "../../../data/logements.js";
+import Carrousel from "../../molecules/Carrousel/Carrousel.jsx";
 import styles from "./Logement.module.scss";
 import Tags from "../../molecules/Tags/Tags.jsx";
 import RatingStars from "../../atoms/RatingStars/RatingStars.jsx";
@@ -12,23 +11,14 @@ import Dropdown from '../../molecules/Dropdown/Dropdown.jsx';
 function Logement() {
     const { id } = useParams(); // Récupère l'ID comme une chaîne de caractères
     const logement = Logements.find((logement) => logement.id === id);
-   // const [dropdown, setDropdown] = useState(false);
 
-
-    /*function handleDropdown() {
-        setDropdown(!dropdown)
-        console.log(dropdown)
-    }
-*/
     if (!logement) {
         return <Navigate to="/not-found" />;
     }
     
     return (
         <main className={styles.logement}>
-            <div className={styles.carrousel}>
-                <img src={logement.cover} alt={logement.title} />
-            </div>
+            <Carrousel pictures={logement.pictures} />
             <div className={styles.fiche_wrapper}>
                 <div className={styles.title_wrapper}>
                     <h1>{logement.title}</h1>

@@ -12,7 +12,10 @@ const Dropdown =({title, src, text}) => {
 
     return (
         <div className={"dropdown_item"}>
-            <h3 className={"dropdown_title"} onClick={handleDropdown}>{title}<img className={"chevron"} src={src} alt="flêche"/></h3>
+            <h3 className={"dropdown_title"} onClick={handleDropdown}>
+                {title}
+                <img className={`chevron ${dropdown ? 'rotate' : ''}`} src={src} alt="flêche" />
+            </h3>
             <ul className={`${"dropdown_text"} ${dropdown ? 'active' : ''}`}>
                 {Array.isArray(text) 
                     ? text.map((item, index) => (

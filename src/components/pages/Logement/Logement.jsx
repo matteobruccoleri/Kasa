@@ -1,11 +1,11 @@
 import { useParams, Navigate } from "react-router-dom";
 import Logements from "../../../data/logements.js";
-import Carrousel from "../../molecules/Carrousel/Carrousel.jsx";
 import styles from "./Logement.module.scss";
 import Tags from "../../molecules/Tags/Tags.jsx";
 import RatingStars from "../../atoms/RatingStars/RatingStars.jsx";
 import Arrow from "../../../assets/images/arrow.png"
 import Dropdown from '../../molecules/Dropdown/Dropdown.jsx';
+import Slideshow from "../../molecules/Slideshow/Slideshow.jsx";
 
 
 function Logement() {
@@ -18,7 +18,7 @@ function Logement() {
     
     return (
         <main className={styles.logement}>
-            <Carrousel pictures={logement.pictures} />
+            <Slideshow pictures={logement.pictures} />
             <div className={styles.fiche_wrapper}>
                 <div className={styles.title_wrapper}>
                     <h1>{logement.title}</h1>

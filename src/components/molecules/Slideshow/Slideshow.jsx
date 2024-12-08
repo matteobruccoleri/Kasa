@@ -18,7 +18,7 @@ const Slideshow = ({ pictures }) => {
   const hasMultipleSlides = pictures.length > 1;
 
   return (
-    <div className="carrousel">
+    <div className="slideshow">
       {/* Affichage des flèches seulement si il y a plus d'un slide */}
       {hasMultipleSlides && (
         <>
@@ -39,7 +39,7 @@ const Slideshow = ({ pictures }) => {
 
       {/* Affichage de l'image du slide courant */}
       <img src={pictures[currentIndex]} alt="Kasa - logement" />
-      
+
       {/* Affichage de la numérotation si plus d'un slide */}
       {hasMultipleSlides && (
         <div className="slide-number">

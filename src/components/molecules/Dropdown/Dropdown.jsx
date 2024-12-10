@@ -16,14 +16,16 @@ const Dropdown =({title, src, text}) => {
                 {title}
                 <img className={`chevron ${dropdown ? 'rotate' : ''}`} src={src} alt="flêche" />
             </h3>
-            <ul className={`${"dropdown_text"} ${dropdown ? 'active' : ''}`}>
-                {Array.isArray(text) 
-                    ? text.map((item, index) => (
-                        <li key={index}>{item}</li>  // Crée un <li> pour chaque élément de text
-                    ))
-                    : <li>{text}</li>  // Si text n'est pas un tableau, on l'affiche en tant que seul <li>
-                }
-            </ul>
+            <div className={`${"dropdown_text"} ${dropdown ? 'active' : ''}`}>
+                <ul>
+                    {Array.isArray(text) 
+                        ? text.map((item, index) => (
+                            <li key={index}>{item}</li>  // Crée un <li> pour chaque élément de text
+                        ))
+                        : <li>{text}</li>  // Si text n'est pas un tableau, on l'affiche en tant que seul <li>
+                    }
+                </ul>
+            </div>
         </div>  
     )
 }

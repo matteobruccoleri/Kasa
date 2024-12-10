@@ -1,25 +1,32 @@
-.carrousel {
-    position: relative;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
+.slideshow {
+  height: 415px;
+  border-radius: 25px;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+
+  img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
   }
   
-  .carrousel img {
-    width: 100%;
-    height: auto;
-  }
+}
+
   
-  .carrousel .previous, .carrousel .next {
+  .slideshow .previous, .slideshow .next {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     /*background-color: rgba(0, 0, 0, 0.5);*/
     color: white;
     border: none;
-    padding: 10px;
     cursor: pointer;
-    width: 45px;
+    width: 32px;
+    height: auto;
   }
   
   .previous {
@@ -39,3 +46,10 @@
     font-weight: 500;
   }
   
+  @media screen and (max-width: 768px) {
+    .slideshow {
+        border-radius: 10px;
+        height: 255px;
+
+    }
+}

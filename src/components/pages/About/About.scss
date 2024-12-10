@@ -5,3 +5,10 @@
     width: 90%;
     margin: auto;
 }
+
+@media screen and (max-width: 768px) {
+    .about_dropdown {
+        width: 100%;
+
+    }
+}

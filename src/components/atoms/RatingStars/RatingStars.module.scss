@@ -7,3 +7,13 @@
     width: 36px;  // Taille des étoiles (ajustez selon vos besoins)
     height: 36px;
 }
+
+@media screen and (max-width: 768px) {
+    .ratingWrapper {
+        gap: 0;
+    }
+    .star {
+        width: 22px;  // Taille des étoiles (ajustez selon vos besoins)
+        height: 22px;
+    }
+}

@@ -21,7 +21,6 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    /*background-color: rgba(0, 0, 0, 0.5);*/
     color: white;
     border: none;
     cursor: pointer;
@@ -50,6 +49,9 @@
     .slideshow {
         border-radius: 10px;
         height: 255px;
-
+        
+        .previous, .next {
+          width: 20px;
+        }
     }
 }

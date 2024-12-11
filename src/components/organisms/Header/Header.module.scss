@@ -16,7 +16,7 @@ header {
             text-decoration: none;
             color: #000;
             font-weight: 500;
-            font-size: 24px;
+            font-size: 20px;
 
             &.active-link {
                 text-decoration: underline;
@@ -27,15 +27,12 @@ header {
 
 }
 
-header nav a.active-link {
-    text-decoration: underline !important;
-}
 
 @media screen and (max-width: 768px) {
     header {
         margin: 25px auto 0;
         img {
-            height: 45px;
+            height: 36px;
         }
         nav {
             gap: 25px;

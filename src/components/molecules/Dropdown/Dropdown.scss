@@ -58,10 +58,9 @@
 
 .dropdown_item {
     flex: 1 0 0;
-    background-color: #F6F6F673;
     border-radius: 5px;
     overflow: hidden;
-    height: max-content;
+    align-self: stretch;
 
     .dropdown_title {
         display: flex;
@@ -83,12 +82,11 @@
 
     .dropdown_text {
         color: #000;
-        height: 0;
+        max-height: 0px;
         overflow: hidden;
-        transition: 0.3s ease-out;
+        transition: max-height 0.3s ease-out; 
         width: 100%;
-        animation: dropdown_close 0.5s linear both;
-
+        background-color: #F6F6F673;
         ul {
             padding: 20px;
             display: flex;
@@ -100,17 +98,13 @@
     }
 
     .dropdown_text.active {
-        height: 300px;
+        height: 100%;
+        max-height: 300px;
         ul {
             transform: translateY(0%);
         }
     }
 }
-
-
-
-  
-
 
 @media screen and (max-width: 768px) {
     .fiche_wrapper {
@@ -129,5 +123,8 @@
 
     .dropdown_wrapper {
         flex-direction: column;
+    }
+    .dropdown_text.active {
+        height: 200px;
     }
 }

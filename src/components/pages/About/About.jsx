@@ -12,9 +12,9 @@ function About() {
                 {apropos.map((item, index) => (
                     <Dropdown 
                         key={index}
-                        title={item.category}  // Utilise "category" comme titre
+                        title={item.category}
                         src={Arrow}
-                        text={item.text}  // Utilise "text" comme contenu
+                        text={item.text}
                     />
                 ))}
             </div>

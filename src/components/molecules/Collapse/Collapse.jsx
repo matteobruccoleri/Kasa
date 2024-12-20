@@ -1,14 +1,12 @@
-//import DataLogement from "../../../data/logements"
-import "./Dropdown.scss"
+import "./Collapse.scss"
 import { useState } from "react";
 
-const Dropdown =({title, src, text}) => {
+const Collapse =({title, src, text}) => {
     const [dropdown, setDropdown] = useState(false);
 
     function handleDropdown() {
         setDropdown(!dropdown)
     }
-
 
     return (
         <div className={"dropdown_item"}>
@@ -20,9 +18,9 @@ const Dropdown =({title, src, text}) => {
                 <ul>
                     {Array.isArray(text) 
                         ? text.map((item, index) => (
-                            <li key={index}>{item}</li>  // Crée un <li> pour chaque élément de text
+                            <li key={index}>{item}</li>
                         ))
-                        : <li>{text}</li>  // Si text n'est pas un tableau, on l'affiche en tant que seul <li>
+                        : <li>{text}</li>
                     }
                 </ul>
             </div>
@@ -30,4 +28,4 @@ const Dropdown =({title, src, text}) => {
     )
 }
 
-export default Dropdown;
+export default Collapse;

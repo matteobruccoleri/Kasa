@@ -4,7 +4,7 @@ import styles from "./Logement.module.scss";
 import Tags from "../../molecules/Tags/Tags.jsx";
 import RatingStars from "../../atoms/RatingStars/RatingStars.jsx";
 import Arrow from "../../../assets/images/arrow.png"
-import Dropdown from '../../molecules/Dropdown/Dropdown.jsx';
+import Dropdown from '../../molecules/Collapse/Collapse.jsx';
 import Slideshow from "../../molecules/Slideshow/Slideshow.jsx";
 
 

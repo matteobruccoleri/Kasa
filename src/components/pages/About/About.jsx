@@ -1,5 +1,5 @@
 import Banner from '../../atoms/Banner/Banner';
-import Dropdown from '../../molecules/Dropdown/Dropdown';
+import Dropdown from '../../molecules/Collapse/Collapse.jsx';
 import './About.scss';
 import Arrow from "../../../assets/images/arrow.png"
 import apropos from '../../../data/apropos.js';

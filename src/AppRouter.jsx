@@ -20,7 +20,7 @@ const Layout = () => {
   );
 };
 
-const Router = () => {
+const AppRouter = () => {
   return (
     <Router>
       <Routes>
@@ -35,4 +35,4 @@ const Router = () => {
   );
 };
 
-export default Router;
+export default AppRouter;
